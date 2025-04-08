@@ -1,0 +1,420 @@
+/* Parent class to ensure specificity */
+.new-orders-page {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+/* Header */
+.new-orders-page .new-orders-header {
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 1rem;
+}
+
+.new-orders-page .new-orders-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.new-orders-page .new-orders-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.new-orders-page .new-orders-header-nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.new-orders-page .new-orders-nav-item {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: #666;
+}
+
+.new-orders-page .new-orders-nav-item.active {
+  color: #000;
+  border-bottom: 2px solid #000;
+}
+
+.new-orders-page .new-orders-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.new-orders-page .new-orders-notification {
+  position: relative;
+  cursor: pointer;
+}
+
+.new-orders-page .new-orders-header-icon {
+  font-size: 1.2rem;
+}
+
+.new-orders-page .new-orders-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #ff4500;
+  color: #fff;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 0.7rem;
+}
+
+.new-orders-page .new-orders-notification-dropdown {
+  position: absolute;
+  top: 2.5rem;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  z-index: 10;
+  padding: 1rem;
+}
+
+.new-orders-page .new-orders-notification-dropdown h4 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.new-orders-page .new-orders-notification-item {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.new-orders-page .new-orders-notification-item:last-child {
+  border-bottom: none;
+}
+
+.new-orders-page .new-orders-notification-item p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.new-orders-page .new-orders-notification-item span {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.new-orders-page .new-orders-user-profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #000000;
+
+}
+
+/* Orders Section */
+.new-orders-page .new-orders-section {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+
+.new-orders-page .new-orders-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.new-orders-page .new-orders-section-header h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.new-orders-page .new-orders-section-header p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+.new-orders-page .new-orders-section-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.new-orders-page .new-orders-new-order-btn,
+.new-orders-page .new-orders-export-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.new-orders-page .new-orders-new-order-btn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+}
+
+.new-orders-page .new-orders-new-order-btn:hover {
+  background-color: #333;
+}
+
+.new-orders-page .new-orders-export-btn {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #e0e0e0;
+}
+
+.new-orders-page .new-orders-export-btn:hover {
+  background-color: #333;
+}
+
+.new-orders-page .new-orders-table-filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.new-orders-page .new-orders-table-filters input,
+.new-orders-page .new-orders-table-filters select {
+  padding: 0.5rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.new-orders-page .new-orders-table-filters input {
+  flex: 1;
+}
+
+.new-orders-page table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.new-orders-page th,
+.new-orders-page td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.new-orders-page th {
+  background-color: #f5f5f5;
+  font-weight: 600;
+}
+
+.new-orders-page .new-orders-status {
+  padding: 0.3rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  color: #000;
+  width: 80px;
+  display: inline-block; 
+  text-align: center; 
+}
+
+.new-orders-page .new-orders-status.pending {
+  background-color: #ffd900b6;
+}
+
+.new-orders-page .new-orders-status.processing {
+  background-color: #1e8fffb7;
+}
+
+.new-orders-page .new-orders-status.shipped {
+  background-color: #69ff80;
+}
+
+.new-orders-page .new-orders-action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+
+/* Modal */
+.new-orders-page .new-orders-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.new-orders-page .new-orders-modal {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.new-orders-page .new-orders-modal h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.new-orders-page .new-orders-form-group {
+  margin-bottom: 1rem;
+}
+
+.new-orders-page .new-orders-form-group label {
+  display: block;
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.new-orders-page .new-orders-form-group input,
+.new-orders-page .new-orders-form-group select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.new-orders-page .new-orders-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.new-orders-page .new-orders-cancel-btn,
+.new-orders-page .new-orders-save-btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.new-orders-page .new-orders-cancel-btn {
+  background: #ccc;
+  color: #333;
+}
+
+.new-orders-page .new-orders-cancel-btn:hover {
+  background: #bbb;
+}
+
+.new-orders-page .new-orders-save-btn {
+  background: #2e7d32;
+  color: #fff;
+}
+
+.new-orders-page .new-orders-save-btn:hover {
+  background: #388e3c;
+}
+
+/* Active Deliveries Section*/
+.new-orders-page .new-orders-active-deliveries-section {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+
+.new-orders-page .new-orders-active-deliveries-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+
+.new-orders-page .new-orders-deliveries-content {
+  display: flex;
+  gap: 1rem;
+}
+
+.new-orders-page .new-orders-map-container {
+  flex: 2;
+}
+
+.new-orders-page .new-orders-delivery-stats {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-orders-page .new-orders-stat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: #f5f5f5;
+  padding: 3.5rem;
+  border-radius: 12px;
+  width: 80%;
+  height: 60%;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.new-orders-page .new-orders-stat-icon {
+  font-size: 2.5rem;
+  color: #2e7d32;
+}
+
+.new-orders-page .new-orders-stat h3 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.new-orders-page .new-orders-stat p {
+  font-size: 2rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+/* System Status */
+.new-orders-page .new-orders-system-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.new-orders-page .new-orders-status-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.new-orders-page .new-orders-status-indicator.online {
+  background-color: #2e7d32;
+}
+
+.new-orders-page .new-orders-status-indicator.offline {
+  background-color: #ff4500;
+}
+
+.new-orders-page .new-orders-system-status p {
+  font-size: 0.9rem;
+  color: #2e7d32;
+}
+
+.new-orders-page .new-orders-system-status p.offline {
+  color: #ff4500;
+}

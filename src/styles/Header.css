@@ -1,0 +1,93 @@
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 70px;
+    transition: background-color 0.3s ease;
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  .header.scrolled {
+    background-color: #ffffff; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  #hero,#features,#about,#contact {
+    padding-top: 70px; 
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  .nav-links a:hover {
+    color: #316c37;
+  }
+  
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .language-selector {
+    padding: 0.5rem; 
+    border: 1px solid #ffffff;
+    border-radius: 2px;
+  }
+  
+  .sign-in-btn {
+    padding: 0.5rem 1rem;
+    background-color: #333; 
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .sign-in-btn:hover {
+    background-color: #316c37;
+  }
+
+  /*Animation*/ 
+   @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .nav-links a.active {
+    color: #316c37;
+    border-bottom: 2px solid #316c37; 
+  }
+
+  

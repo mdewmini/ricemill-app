@@ -1,0 +1,124 @@
+/*.hero-section {
+    height: 80vh;
+    background-image: url('/Users/maheeshadewmini/ricemill-app/src/assets/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+  }*/
+
+  .hero-section {
+    height: 80vh;
+    background-image: url('/Users/maheeshadewmini/ricemill-app/src/assets/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    margin-top: -70px;
+    margin-bottom: 0; 
+    padding-bottom: 0;
+    padding-top: 0;
+    width: 100%;
+    box-sizing: border-box; 
+  }
+
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)); 
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin-top: -5rem;
+    transition: margin-top 0.3s ease;
+    padding: 0 20px;
+  }
+  
+  .hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: 1px; 
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .get-started-btn,
+  .learn-more-btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .get-started-btn {
+    background-color: #000000;
+    color: #ffffff;
+  }
+  
+  .get-started-btn:hover {
+    background-color: #f0f0f08a;
+  }
+  
+  .learn-more-btn {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+  
+  .learn-more-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  @media (max-width: 768px) {
+    .hero-section {
+      background-attachment: scroll;
+      min-height: 600px;
+    }
+
+    .hero-content {
+      margin-top: -3rem; 
+    }
+
+    .hero-content h1 {
+      font-size: 3rem; 
+    }
+
+    .hero-content h1 {
+      font-size: 3rem; 
+    }
+  
+    .hero-content p {
+      font-size: 1.2rem; 
+    }
+  }
+
+  
