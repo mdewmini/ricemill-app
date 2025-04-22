@@ -1,324 +1,297 @@
-.analytics-page {
+.analytics-figma-page {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  background: #f4f7fa;
-  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+  background: #f5f5f5;
+  font-family: 'Inter', sans-serif; 
 }
 
-.analytics-header {
+.analytics-figma-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 3rem;
-  background: #ffffff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 1rem 2rem;
+  background: #FFFFFF;
+  border-bottom: 1px solid #E0E0E0;
 }
 
-.analytics-logo {
-  font-size: 1.8rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: #000000; /* Change logo color to black */
+.analytics-figma-logo{
+  width: 120px;
+  height: auto; 
 }
 
-.analytics-nav {
+.analytics-figma-logo img {
+  width: 80%;
+  height: auto;
+}
+
+.analytics-figma-nav {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
-.analytics-nav button {
+.analytics-figma-nav button {
   background: none;
   border: none;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 500;
-  color: #666;
+  color: #000000;
   cursor: pointer;
   padding: 0.5rem 1rem;
-  border-radius: 6px;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: background 0.3s ease;
 }
 
-.analytics-nav-active {
-  background: #4caf50;
-  color: #fff;
+.analytics-figma-nav-active {
+  background: none;
+  color: #000000;
+  font-weight: 700;
+  text-decoration: underline;
 }
 
-.analytics-nav button:hover {
-  background: #e8f5e9;
-  color: #2e7d32;
+.analytics-figma-nav button:hover {
+  background: #F0F0F0;
 }
 
-.analytics-new-report-btn {
-  background: #2e7d32;
-  color: #fff;
+.analytics-figma-new-report-btn {
+  background: #000000;
+  color: #FFFFFF;
   border: none;
-  padding: 0.6rem 1.5rem;
-  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 500;
   transition: background 0.3s ease;
 }
 
-.analytics-new-report-btn:hover {
-  background: #388e3c;
+.analytics-figma-new-report-btn:hover {
+  background: #333333;
 }
 
-.analytics-content {
+.analytics-figma-content {
   flex: 1;
-  padding: 3rem;
+  padding: 2rem;
   overflow-y: auto;
 }
 
-.analytics-content h1 {
-  font-size: 2.2rem;
-  font-weight: 600;
-  color: #333;
+.analytics-figma-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
   margin-bottom: 2rem;
 }
 
-.analytics-cards {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem; /* Reduce gap between cards */
-  margin-bottom: 3rem;
-  max-width: 1200px; /* Limit the maximum width of the cards section */
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.analytics-card {
+.analytics-figma-card {
   display: flex;
   align-items: center;
-  background: #fff;
-  padding: 1rem; /* Reduce padding to make cards narrower */
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #FFFFFF;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.analytics-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+.analytics-figma-card-icon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  color: #08863c; 
 }
 
-.analytics-card-icon {
-  font-size: 2rem; /* Reduce icon size */
-  margin-right: 1rem; /* Reduce margin */
-}
-
-.analytics-card-content {
+.analytics-figma-card-content {
   flex: 1;
 }
 
-.analytics-card-content h3 {
-  font-size: 1rem; /* Reduce font size */
-  color: #666;
-  margin-bottom: 0.5rem;
-}
-
-.analytics-card-content p {
-  font-size: 1.5rem; /* Reduce font size */
-  font-weight: 600;
+.analytics-figma-card-content h3 {
+  font-size: 0.9rem;
+  color: #000000;
   margin-bottom: 0.3rem;
-  color: #333;
 }
 
-.analytics-trend {
-  font-size: 0.9rem; /* Reduce font size */
+.analytics-figma-card-content p {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+  color: #000000;
+}
+
+.analytics-figma-trend {
+  font-size: 0.8rem;
   font-weight: 500;
 }
 
-.analytics-trend-up {
-  color: #4caf50;
+.analytics-figma-trend-up {
+  color: #00FF00;
 }
 
-.analytics-trend-down {
-  color: #ff0000;
+.analytics-figma-trend-down {
+  color: #FF0000;
 }
 
-.analytics-charts {
+.analytics-figma-charts {
   display: grid;
   grid-template-columns: 3fr 1fr;
-  gap: 1.5rem; /* Reduce gap */
-  margin-bottom: 3rem;
-  max-width: 1200px; /* Limit the maximum width of the charts section */
-  margin-left: auto;
-  margin-right: auto;
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
 
-.analytics-chart {
-  background: #fff;
-  padding: 1.5rem; /* Reduce padding */
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+.analytics-figma-chart {
+  background: #FFFFFF;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.analytics-sales-trend {
+.analytics-figma-sales-trend {
   position: relative;
   display: flex;
   flex-direction: column;
 }
 
-.analytics-chart h3 {
-  font-size: 1.2rem; /* Reduce font size */
-  margin-bottom: 0.8rem;
-  color: #333;
+.analytics-figma-chart h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #000000;
 }
 
-.analytics-chart p {
-  font-size: 0.9rem; /* Reduce font size */
-  color: #666;
+.analytics-figma-chart p {
+  font-size: 0.8rem;
+  color: #666666;
   margin-bottom: 1rem;
 }
 
-.analytics-time-filter {
+.analytics-figma-time-filter {
   padding: 0.5rem;
-  border-radius: 6px;
-  border: 1px solid #ddd;
-  background: #fff;
-  font-size: 0.9rem; /* Reduce font size */
+  border-radius: 4px;
+  border: 1px solid #E0E0E0;
+  background: #FFFFFF;
+  font-size: 0.9rem;
   margin-bottom: 1rem;
   cursor: pointer;
-  width: 180px; /* Reduce width */
+  width: 150px;
 }
 
-.analytics-chart-container {
-  height: 350px; /* Reduce height slightly */
+.analytics-figma-chart-container {
+  height: 300px;
   width: 100%;
   position: relative;
 }
 
-.analytics-pie-chart-container {
-  width: 80%;
-  height: 80%;
+.analytics-figma-pie-chart-container {
+  width: 100%;
+  height: 200px;
   margin: 0 auto;
 }
 
-.analytics-satisfaction-labels {
+.analytics-figma-satisfaction-labels {
   margin-top: 1rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-.analytics-satisfaction-label {
+.analytics-figma-satisfaction-label {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.8rem; /* Reduce font size */
-  color: #333;
+  font-size: 0.8rem;
+  color: #000000;
 }
 
-.analytics-satisfaction-color {
-  width: 10px; /* Reduce size */
-  height: 10px;
+.analytics-figma-satisfaction-color {
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   display: inline-block;
 }
 
-.analytics-bottom-section {
+.analytics-figma-bottom-section {
   display: grid;
-  grid-template-columns: 1fr 0.8fr 2.2fr;
-  gap: 1.5rem; /* Reduce gap */
-  max-width: 1200px; /* Limit the maximum width of the bottom section */
-  margin-left: auto;
-  margin-right: auto;
+  grid-template-columns: 1fr 0.8fr 2fr;
+  gap: 1rem;
 }
 
-.analytics-predictive-insights {
-  background: #fff;
-  padding: 1rem; /* Reduce padding */
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+.analytics-figma-predictive-insights {
+  background: #FFFFFF;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.analytics-predictive-insights h3 {
-  font-size: 1rem; /* Reduce font size */
+.analytics-figma-predictive-insights h3 {
+  font-size: 1.1rem;
   margin-bottom: 0.8rem;
-  color: #333;
+  color: #000000;
 }
 
-.analytics-insight {
+.analytics-figma-insight {
   display: flex;
   align-items: center;
-  padding: 0.6rem; /* Reduce padding */
+  padding: 0.8rem;
   border-radius: 8px;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.8rem;
 }
 
-.analytics-insight-recommendation {
-  background: #e8f5e9;
+.analytics-figma-insight-recommendation {
+  background: #FFF9E5; 
 }
 
-.analytics-insight-growth-opportunity {
-  background: #e3f2fd;
+.analytics-figma-insight-growth-opportunity {
+  background: #E5FFE5;
 }
 
-.analytics-insight-icon {
-  font-size: 1.2rem; /* Reduce icon size */
+.analytics-figma-insight-icon {
+  font-size: 1.5rem;
   margin-right: 0.8rem;
-  color: #2e7d32;
+  color: #000000;
 }
 
-.analytics-insight-content h4 {
-  font-size: 0.9rem; /* Reduce font size */
+.analytics-figma-insight-content h4 {
+  font-size: 0.9rem;
   margin-bottom: 0.2rem;
-  color: #333;
+  color: #000000;
 }
 
-.analytics-insight-content p {
-  font-size: 0.75rem; /* Reduce font size */
-  color: #666;
+.analytics-figma-insight-content p {
+  font-size: 0.8rem;
+  color: #666666;
 }
 
-.analytics-export-options {
-  background: #fff;
+.analytics-figma-export-options {
+  background: #FFFFFF;
   padding: 1rem;
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-.analytics-export-options h3 {
-  font-size: 1rem;
+.analytics-figma-export-options h3 {
+  font-size: 1.1rem;
   margin-bottom: 0.8rem;
-  color: #333;
+  color: #000000;
 }
 
-.analytics-export-btn {
+.analytics-figma-export-btn {
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  padding: 0.5rem;
-  border: none;
-  border-radius: 8px;
+  padding: 0.8rem;
+  border: 1px solid #E0E0E0;
+  border-radius: 4px;
   cursor: pointer;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 500;
+  background: #E0E0E0;
+  color: #000000;
   transition: background 0.3s ease;
 }
 
-.analytics-export-btn-pdf {
-  background: #4caf50;
-  color: #fff;
-}
-
-.analytics-export-btn-csv {
-  background: #2196f3;
-  color: #fff;
-}
-
-.analytics-export-btn:hover {
-  opacity: 0.9;
+.analytics-figma-export-btn:hover {
+  background: #D0D0D0;
 }
 
 /* Report Modal */
-.analytics-report-modal {
+.analytics-figma-report-modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -331,90 +304,90 @@
   z-index: 1000;
 }
 
-.analytics-report-modal-content {
-  background: #fff;
-  padding: 1.5rem; /* Reduce padding */
-  border-radius: 12px;
+.analytics-figma-report-modal-content {
+  background: #FFFFFF;
+  padding: 1.5rem;
+  border-radius: 8px;
   width: 90%;
-  max-width: 500px; /* Reduce max-width */
+  max-width: 500px;
   max-height: 80vh;
   overflow-y: auto;
   position: relative;
 }
 
-.analytics-report-modal-header {
+.analytics-figma-report-modal-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
 }
 
-.analytics-report-modal-header h2 {
-  font-size: 1.5rem; /* Reduce font size */
-  color: #333;
+.analytics-figma-report-modal-header h2 {
+  font-size: 1.5rem;
+  color: #000000;
 }
 
-.analytics-close-btn {
+.analytics-figma-close-btn {
   background: none;
   border: none;
-  font-size: 1.2rem; /* Reduce font size */
+  font-size: 1.2rem;
   cursor: pointer;
-  color: #666;
+  color: #666666;
 }
 
-.analytics-close-btn:hover {
-  color: #333;
+.analytics-figma-close-btn:hover {
+  color: #000000;
 }
 
-.analytics-report-details h3 {
-  font-size: 1.3rem; /* Reduce font size */
+.analytics-figma-report-details h3 {
+  font-size: 1.3rem;
   margin-bottom: 0.8rem;
-  color: #333;
+  color: #000000;
 }
 
-.analytics-report-details p {
-  font-size: 1rem; /* Reduce font size */
+.analytics-figma-report-details p {
+  font-size: 1rem;
   margin-bottom: 0.8rem;
-  color: #666;
+  color: #666666;
 }
 
-.analytics-report-details h4 {
-  font-size: 1.1rem; /* Reduce font size */
+.analytics-figma-report-details h4 {
+  font-size: 1.1rem;
   margin-bottom: 0.6rem;
-  color: #333;
+  color: #000000;
 }
 
-.analytics-report-details ul {
+.analytics-figma-report-details ul {
   list-style: none;
   padding: 0;
 }
 
-.analytics-report-details ul li {
-  font-size: 0.9rem; /* Reduce font size */
-  color: #333;
+.analytics-figma-report-details ul li {
+  font-size: 0.9rem;
+  color: #000000;
   margin-bottom: 0.4rem;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .analytics-cards {
+  .analytics-figma-cards {
     grid-template-columns: 1fr;
   }
-  .analytics-charts {
+  .analytics-figma-charts {
     grid-template-columns: 1fr;
   }
-  .analytics-bottom-section {
+  .analytics-figma-bottom-section {
     grid-template-columns: 1fr;
   }
-  .analytics-header {
+  .analytics-figma-header {
     flex-direction: column;
     gap: 1rem;
   }
-  .analytics-nav {
+  .analytics-figma-nav {
     flex-wrap: wrap;
     justify-content: center;
   }
-  .analytics-chart-container {
-    height: 250px; /* Reduce height for smaller screens */
+  .analytics-figma-chart-container {
+    height: 250px;
   }
 }

@@ -4,7 +4,7 @@
     width: 100vw;
     background: url('src/assets/logo.webp') no-repeat center center/cover;
   }
-  
+
   .verify-otp-container {
     flex: 1;
     display: flex;
@@ -25,7 +25,7 @@
     color: #fff;
     margin-bottom: 1rem;
   }
-  
+
   .verify-otp-form p {
     color: #fff;
     margin-bottom: 1.5rem;
@@ -53,6 +53,7 @@
     gap: 1rem;
     margin-bottom: 2rem;
   }
+  
   
   .otp-inputs input {
     width: 50px;
@@ -110,3 +111,5 @@
   .verify-otp-image p {
     font-size: 1.2rem;
   }
+
+

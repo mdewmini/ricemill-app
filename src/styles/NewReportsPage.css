@@ -5,7 +5,7 @@
   padding: 1rem;
 }
 
-/* Header */
+
 .new-reports-page .new-reports-header {
   background-color: #fff;
   border-bottom: 1px solid #e0e0e0;
@@ -19,8 +19,13 @@
 }
 
 .new-reports-page .new-reports-logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+  width: 100px;
+  height: auto; 
+}
+
+.new-reports-page .new-reports-logo img {
+  width: 60%;
+  height: auto;
 }
 
 .new-reports-page .new-reports-header-nav {
@@ -113,7 +118,7 @@
   border: 2px solid #000000;
 }
 
-/* Reports Section */
+
 .new-reports-page .new-reports-section {
   background-color: #fff;
   border-radius: 8px;
@@ -158,7 +163,7 @@
   background-color: #388e3c;
 }
 
-/* Summary Cards */
+
 .new-reports-page .new-reports-summary-cards {
   display: flex;
   gap: 1rem;
@@ -191,7 +196,7 @@
   font-weight: bold;
 }
 
-/* Chart */
+
 .new-reports-page .new-reports-chart {
   height: 300px;
 }
@@ -201,7 +206,7 @@
   margin-bottom: 1rem;
 }
 
-/* System Status */
+
 .new-reports-page .new-reports-system-status {
   display: flex;
   align-items: center;

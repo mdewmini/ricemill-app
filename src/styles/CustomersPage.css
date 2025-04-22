@@ -17,9 +17,19 @@
 }
 
 .customer-logo {
-  font-size: 1.8rem;
-  font-weight: 700;
-  letter-spacing: 1px;
+  width: 150px;
+  height: auto; 
+  background: linear-gradient(180deg, #f5f5f5 100%, #f5f5f5 100%); 
+  overflow: hidden; 
+  margin-top: -2.5rem;
+}
+
+.customer-logo img {
+  width: 60%;
+  height: auto;
+  display: block;
+  mix-blend-mode: multiply; 
+  background: transparent;
 }
 
 .customer-header-actions {
@@ -520,7 +530,7 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
   margin-top: -0.25rem;
-  margin-right: -40rem;
+  margin-right: -36rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;

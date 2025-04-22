@@ -3,18 +3,18 @@ import '../styles/OrdersPage.css';
 
 const OrdersPage = () => {
   const orders = [
-    { id: '#12345', customer: 'Maheesa Thambawita', status: 'Delivered', amount: '$320.00' },
-    { id: '#12344', customer: 'Maheesa Thambawita', status: 'Processing', amount: '$150.00' },
-    { id: '#12343', customer: 'Yasas Dinusha', status: 'Shipped', amount: '$450.00' },
-    { id: '#12342', customer: 'Ranjith Weerasinghe', status: 'Delivered', amount: '$300.00' },
-    { id: '#12341', customer: 'Nimal Perera', status: 'Delivered', amount: '$500.00' },
-    { id: '#12343', customer: 'Yasas Dinusha', status: 'Shipped', amount: '$450.00' },
-    { id: '#12342', customer: 'Ranjith Weerasinghe', status: 'Delivered', amount: '$300.00' },
-    { id: '#12341', customer: 'Nimal Perera', status: 'Delivered', amount: '$500.00' },
-    { id: '#12343', customer: 'Yasas Dinusha', status: 'Shipped', amount: '$450.00' },
-    { id: '#12342', customer: 'Ranjith Weerasinghe', status: 'Delivered', amount: '$300.00' },
-    { id: '#12341', customer: 'Nimal Perera', status: 'Delivered', amount: '$500.00' },
-    { id: '#12343', customer: 'Yasas Dinusha', status: 'Shipped', amount: '$450.00' },
+    { id: '#12345', customer: 'Maheesa Thambawita', status: 'Delivered', amount: 'LKR 3200.00' },
+    { id: '#12344', customer: 'Maheesa Thambawita', status: 'Processing', amount: 'LKR 1500.00' },
+    { id: '#12343', customer: 'Yasas Dinusha', status: 'Shipped', amount: 'LKR 4500.00' },
+    { id: '#12342', customer: 'Ranjith Weerasinghe', status: 'Delivered', amount: 'LKR 3000.00' },
+    { id: '#12341', customer: 'Nimal Perera', status: 'Delivered', amount: 'LKR 5000.00' },
+    { id: '#12343', customer: 'Yasas Dinusha', status: 'Shipped', amount: 'LKR 4500.00' },
+    { id: '#12342', customer: 'Ranjith Weerasinghe', status: 'Delivered', amount: 'LKR 3000.00' },
+    { id: '#12341', customer: 'Nimal Perera', status: 'Delivered', amount: 'LKR 5000.00' },
+    { id: '#12343', customer: 'Yasas Dinusha', status: 'Shipped', amount: 'LKR 4500.00' },
+    { id: '#12342', customer: 'Ranjith Weerasinghe', status: 'Delivered', amount: 'LKR 3000.00' },
+    { id: '#12341', customer: 'Nimal Perera', status: 'Delivered', amount: 'LKR 5000.00' },
+    { id: '#12343', customer: 'Yasas Dinusha', status: 'Shipped', amount: 'LKR 4500.00' },
   ];
 
   return (

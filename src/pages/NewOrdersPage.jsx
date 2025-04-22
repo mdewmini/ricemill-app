@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FaBell, FaUser, FaDownload, FaEdit, FaEye, FaPlus, FaMapMarkerAlt, FaTruck, FaClock, FaCheckCircle } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import '../styles/NewOrdersPage.css';
+import logo from '../assets/logo.png';
 
 const NewOrdersPage = () => {
   const navigate = useNavigate();
@@ -12,9 +13,9 @@ const NewOrdersPage = () => {
     { id: 2, message: 'Order #ORD-2025-003 shipped', date: '2025-01-13', read: false },
   ]);
   const [orders, setOrders] = useState([
-    { id: '#ORD-2025-001', customer: 'T.M.D.G. Athula', status: 'Pending', date: 'Jan 15, 2025', total: '$245.00' },
-    { id: '#ORD-2025-002', customer: 'M.D. Thambawita', status: 'Processing', date: 'Jan 14, 2025', total: '$189.50' },
-    { id: '#ORD-2025-003', customer: 'K.V.D. Swarna', status: 'Shipped', date: 'Jan 13, 2025', total: '$432.75' },
+    { id: '#ORD-2025-001', customer: 'T.M.D.G. Athula', status: 'Pending', date: 'Jan 15, 2025', total: 'LKR 2450.00' },
+    { id: '#ORD-2025-002', customer: 'M.D. Thambawita', status: 'Processing', date: 'Jan 14, 2025', total: 'LKR 1800.50' },
+    { id: '#ORD-2025-003', customer: 'K.V.D. Swarna', status: 'Shipped', date: 'Jan 13, 2025', total: 'LKR 4000.75' },
   ]);
   const [searchTerm, setSearchTerm] = useState('');
   const [statusFilter, setStatusFilter] = useState('All Status');
@@ -26,7 +27,7 @@ const NewOrdersPage = () => {
   });
   const [systemOnline, setSystemOnline] = useState(true);
 
-  // Calculate delivery stats based on orders
+ 
   const activeDeliveries = orders.filter(order => order.status === 'Processing').length;
   const pendingDeliveries = orders.filter(order => order.status === 'Pending').length;
   const completedToday = orders.filter(order => order.status === 'Shipped' && order.date === new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })).length;
@@ -146,7 +147,9 @@ const NewOrdersPage = () => {
       {/* Header */}
       <header className="new-orders-header">
         <div className="new-orders-header-top">
-          <div className="new-orders-logo">LOGO</div>
+          <div className="new-orders-logo">
+          <img src={logo} alt="RiceMillPro Logo" />
+          </div>
           <nav className="new-orders-header-nav">
             <button className="new-orders-nav-item" onClick={() => navigate('/dashboard')}>
               Dashboard
@@ -285,7 +288,7 @@ const NewOrdersPage = () => {
               </select>
             </div>
             <div className="new-orders-form-group">
-              <label>Total ($)</label>
+              <label>Total (LKR)</label>
               <input
                 type="number"
                 value={newOrder.total}

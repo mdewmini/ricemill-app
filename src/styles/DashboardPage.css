@@ -6,7 +6,7 @@
   font-family: 'Roboto', sans-serif;
 }
 
-/* Sidebar */
+
 .sidebar {
   width: 220px;
   background: linear-gradient(180deg, #20562A 100%, #1b5e20 100%);
@@ -18,11 +18,20 @@
 }
 
 .logo {
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-bottom: 2.5rem;
-  text-align: center;
-  letter-spacing: 1px;
+  width: 150px;
+  height: auto;
+  background: linear-gradient(180deg, #20562A 100%, #1b5e20 100%); 
+  border-radius: 8px; 
+  overflow: hidden; 
+  margin-top: -3rem;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  mix-blend-mode: multiply; 
+  background: transparent;
 }
 
 .sidebar-nav {
@@ -59,14 +68,14 @@
   font-size: 1.3rem;
 }
 
-/* Main Content */
+
 .main-content {
   flex: 1;
   padding: 2rem;
   overflow-y: auto;
 }
 
-/* Header */
+
 .dashboard-header {
   margin-bottom: 2.5rem;
 }
@@ -188,7 +197,7 @@
   color: #333;
 }
 
-/* Dashboard Cards */
+
 .dashboard-cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -205,10 +214,6 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
-
-/*.card:hover {
-  transform: translateY(-5px);
-}*/
 
 .card-icon {
   font-size: 2rem;
@@ -251,7 +256,7 @@
   font-weight: 500;
 }
 
-/* Charts */
+
 .charts {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -289,7 +294,7 @@
   height: 70%;
 }
 
-/* Recent Orders Table */
+
 .recent-orders {
   background: #fff;
   padding: 1.5rem;
@@ -330,7 +335,7 @@
   padding: 0.4rem 1rem;
   border-radius: 20px;
   font-size: 0.85rem;
-  font-weight: 500;
+  font-weight: 100;
   color: #000; 
   display: inline-block; 
   text-align: center;
@@ -342,7 +347,7 @@
   width: 60px; 
   height: 6px; 
   border-radius: 10px;
-  margin-right: 0.1rem;
+  margin-left: 0.1rem;
 }
 
 .status-text {

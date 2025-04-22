@@ -1,0 +1,306 @@
+.checkout-confirmation-page {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .checkout-confirmation-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .checkout-confirmation-logo {
+    width: 120px;
+    height: auto;
+  }
+  
+  .checkout-confirmation-logo img {
+    width: 60%;
+    height: auto;
+  }
+  
+  .checkout-confirmation-nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .checkout-confirmation-nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .checkout-confirmation-nav-links a:hover {
+    color: #000;
+  }
+  
+  .checkout-confirmation-header-icons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+  }
+  
+  .checkout-confirmation-cart-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+  }
+  
+  .checkout-confirmation-cart-btn:hover {
+    background-color: #333;
+  }
+  
+  .checkout-confirmation-cart-icon {
+    font-size: 1.2rem;
+  }
+  
+  .checkout-confirmation-cart-label {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  .checkout-confirmation-cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #ff0000;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+ 
+  .checkout-confirmation-main {
+    flex: 1;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .checkout-confirmation-main h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+  
+  .checkout-confirmation-content {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+
+  .checkout-confirmation-payment {
+    flex: 1;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .checkout-confirmation-payment h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .checkout-confirmation-paypal-btn,
+  .checkout-confirmation-card-btn {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .checkout-confirmation-paypal-btn {
+    background-color: #ffc107;
+    color: #000;
+  }
+  
+  .checkout-confirmation-paypal-btn:hover {
+    background-color: #e0a800;
+  }
+  
+  .checkout-confirmation-card-btn {
+    background-color: #343a40;
+    color: #fff;
+  }
+  
+  .checkout-confirmation-card-btn:hover {
+    background-color: #23272b;
+  }
+  
+  .checkout-confirmation-paypal-info {
+    font-size: 0.9rem;
+    color: #555;
+    text-align: center;
+  }
+  
+  .checkout-confirmation-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .checkout-confirmation-shipping,
+  .checkout-confirmation-cart {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .checkout-confirmation-shipping h2,
+  .checkout-confirmation-cart h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .checkout-confirmation-shipping-details p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .checkout-confirmation-icon {
+    font-size: 1.2rem;
+  }
+  
+  .checkout-confirmation-cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  
+  .checkout-confirmation-cart-item p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .checkout-confirmation-total {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    border-top: 1px solid #ddd;
+    padding-top: 1rem;
+  }
+  
+  .checkout-confirmation-total h3 {
+    font-size: 1.2rem;
+  }
+  
+  .checkout-confirmation-total p {
+    font-size: 1.2rem;
+  }
+  
+
+  .checkout-confirmation-footer {
+    background-color: #cecccc;
+    padding: 2rem;
+    margin-top: auto;
+  }
+  
+  .checkout-confirmation-footer-columns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .checkout-confirmation-footer-column h5 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .checkout-confirmation-footer-column p,
+  .checkout-confirmation-footer-column ul {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .checkout-confirmation-footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .checkout-confirmation-footer-column ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .checkout-confirmation-footer-column ul li a {
+    text-decoration: none;
+    color: #555;
+    transition: color 0.3s ease;
+  }
+  
+  .checkout-confirmation-footer-column ul li a:hover {
+    color: #000;
+  }
+  
+  .checkout-confirmation-social-icons {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .checkout-confirmation-social-icons a {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 1.5rem;
+  }
+  
+  .checkout-confirmation-social-icons a:hover {
+    color: #fff;
+  }
+  
+
+  .checkout-confirmation-social-icons {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+
+  .checkout-confirmation-copyright {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 1rem;
+  }
+
+
+
+  

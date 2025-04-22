@@ -26,11 +26,16 @@
     padding-top: 70px; 
   }
   
-  .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+  .logo_header {
+    width: 120px; 
+    height: auto;
   }
   
+  .logo_header img {
+    width: 60%;
+    height: auto;
+  }
+
   .nav-links {
     display: flex;
     gap: 1.5rem;

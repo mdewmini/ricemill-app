@@ -5,6 +5,7 @@ import { FaSyncAlt, FaBell, FaUser, FaDownload, FaChartLine, FaChartBar, FaChart
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import '../styles/DemandForecastingPage.css';
+import logo from '../assets/logo.png';
 
 ChartJS.register(LineElement, PointElement, CategoryScale, LinearScale, Tooltip, Legend);
 
@@ -12,7 +13,7 @@ const DemandForecastingPage = () => {
   const { user } = useAuth();
   const navigate = useNavigate();
 
-  // Check if user is null or role is not mill_owner
+ 
   if (!user || user.role !== 'mill_owner') {
     navigate('/dashboard');
     return null;
@@ -27,7 +28,7 @@ const DemandForecastingPage = () => {
   const [marketGrowth, setMarketGrowth] = useState(0);
   const [forecastData, setForecastData] = useState([null, null, null, null, 110, 120, 200, 220, 250]);
 
-  // Dynamically update forecast data based on time range
+ 
   useEffect(() => {
     let baseForecast = [150, 140, 160, 130, 110, 120, 200, 220, 250];
     if (timeRange === '1M') {
@@ -73,7 +74,7 @@ const DemandForecastingPage = () => {
         },
         {
           label: 'Confidence Interval',
-          data: forecastData.map(value => (value ? value * 0.9 : null)), // Example confidence interval
+          data: forecastData.map(value => (value ? value * 0.9 : null)), 
           borderColor: 'rgba(30, 144, 255, 0.1)',
           backgroundColor: 'rgba(30, 144, 255, 0.1)',
           borderWidth: 0,
@@ -155,7 +156,9 @@ const DemandForecastingPage = () => {
       <header className="forecasting-header">
         <div className="header-top">
           <div className="header-left">
-            <div className="logo">LOGO</div>
+            <div className="logo_demand">
+            <img src={logo} alt="RiceMillPro Logo" />
+            </div>
             <button className="dashboard-btn" onClick={() => navigate('/dashboard')}>
               Back to Dashboard
             </button>

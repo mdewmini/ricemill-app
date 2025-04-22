@@ -5,7 +5,7 @@
     font-family: 'Roboto', sans-serif;
   }
   
-  /* Header */
+
   .orders-header {
     margin-bottom: 2rem;
   }
@@ -17,7 +17,7 @@
     margin: 0;
   }
   
-  /* Table Container */
+
   .orders-table-container {
     background: #fff;
     border-radius: 12px;
@@ -25,7 +25,7 @@
     overflow: hidden;
   }
   
-  /* Table */
+  
   .orders-table {
     width: 100%;
     border-collapse: collapse;
@@ -51,7 +51,7 @@
     font-size: 0.9rem;
   }
   
-  /* Table Row Hover Effect */
+
   .orders-table tbody tr {
     transition: background 0.3s ease;
   }
@@ -60,12 +60,12 @@
     background: #f5f5f5;
   }
   
-  /* Status*/ 
+ 
   .status {
     padding: 0.4rem 1rem;
     border-radius: 20px;
     font-size: 0.85rem;
-    font-weight: 500;
+    font-weight: 100;
     color: #000; 
     display: inline-block; 
     text-align: center;
@@ -77,7 +77,7 @@
     width: 60px; 
     height: 6px; 
     border-radius: 10px;
-    margin-right: 0.1rem;
+    margin-left: 0.1rem;
   }
   
   .status-text {
@@ -91,7 +91,7 @@
   }
   
   .status.processing .status-bar {
-    background: #ffd700;
+    background: #efcd0b;
   }
   
   .status.shipped .status-bar {

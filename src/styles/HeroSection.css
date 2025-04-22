@@ -1,19 +1,6 @@
-/*.hero-section {
-    height: 80vh;
-    background-image: url('/Users/maheeshadewmini/ricemill-app/src/assets/hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #fff;
-    position: relative;
-  }*/
-
   .hero-section {
     height: 80vh;
-    background-image: url('/Users/maheeshadewmini/ricemill-app/src/assets/hero-bg.jpg');
+    background-image: url('src/assets/hero-bg.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed; 

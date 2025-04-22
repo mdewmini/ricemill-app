@@ -4,6 +4,7 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { FaSyncAlt, FaBell, FaUserPlus, FaFileImport, FaFilter, FaDownload, FaEdit, FaEye, FaUsers, FaDollarSign, FaStar, FaChartLine, FaChartPie, FaTimes } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import '../styles/CustomersPage.css';
+import logo from '../assets/logo.png';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -29,7 +30,7 @@ const CustomersPage = () => {
       lastOrder: 'Jan 15, 2025',
       segment: 'Premium',
       status: 'Active',
-      amount: '$2,300',
+      amount: 'LKR 23000',
     },
     {
       id: '#12346',
@@ -38,7 +39,7 @@ const CustomersPage = () => {
       lastOrder: 'Oct 15, 2024',
       segment: 'Wholesale',
       status: 'Active',
-      amount: '$1,800',
+      amount: 'LKR 180000',
     },
   ]);
 
@@ -237,7 +238,9 @@ const CustomersPage = () => {
     <div className="customers-page">
       <header className="customer-header">
         <div className="customer-header-top">
-          <div className="customer-logo">LOGO</div>
+          <div className="customer-logo">
+          <img src={logo} alt="RiceMillPro Logo" />
+          </div>
           <button className="dashboard-btn" onClick={() => navigate('/dashboard')}>
                 Back to Dashboard
           </button>
@@ -360,7 +363,7 @@ const CustomersPage = () => {
             <FaDollarSign className="customer-card-icon" />
             <div className="customer-card-text">
               <h3>Average Order Value</h3>
-              <p>$1,200</p>
+              <p>LKR 90,000</p>
               <span className="customer-trend up">↑ 8.2%</span>
             </div>
           </div>

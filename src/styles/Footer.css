@@ -87,4 +87,20 @@
     color: #ffffff;
   }
 
+  .logo_footer {
+    width: 150px;
+    height: auto;
+    border-radius: 8px; 
+    overflow: hidden; 
+    margin-top: -3rem;
+  }
+  
+  .logo_footer img {
+    width: 100%;
+    height: auto;
+    display: block;
+    mix-blend-mode: multiply; 
+    background: transparent;
+  }
+  
   

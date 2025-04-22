@@ -5,7 +5,7 @@
   padding: 1rem;
 }
 
-/* Header */
+
 .new-deliveries-page .new-deliveries-header {
   background-color: #fff;
   border-bottom: 1px solid #e0e0e0;
@@ -18,9 +18,14 @@
   align-items: center;
 }
 
-.new-deliveries-page .new-deliveries-logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+.new-deliveries-page .new-deliveries-logo{
+  width: 150px;
+  height: auto; 
+}
+
+.new-deliveries-page .new-deliveries-logo img {
+  width: 60%;
+  height: auto;
 }
 
 .new-deliveries-page .new-deliveries-header-nav {
@@ -113,7 +118,7 @@
   border: 2px solid #000000;
 }
 
-/* Deliveries Section */
+
 .new-deliveries-page .new-deliveries-section {
   background-color: #fff;
   border-radius: 8px;
@@ -240,7 +245,7 @@
   margin-right: 0.5rem;
 }
 
-/* Modal */
+
 .new-deliveries-page .new-deliveries-modal-overlay {
   position: fixed;
   top: 0;
@@ -322,7 +327,7 @@
   background: #388e3c;
 }
 
-/* System Status */
+
 .new-deliveries-page .new-deliveries-system-status {
   display: flex;
   align-items: center;

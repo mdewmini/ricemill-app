@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext'; // Import useAuth
+import { useAuth } from '../context/AuthContext'; 
 import '../styles/LoginPage.css';
 
 const LoginPage = () => {
@@ -8,20 +8,20 @@ const LoginPage = () => {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [role, setRole] = useState('Admin');
   const navigate = useNavigate();
-  const { login } = useAuth(); // Get login function from AuthContext
+  const { login } = useAuth(); 
 
   const handleLogin = (e) => {
     e.preventDefault();
-    // Create user data with role
+   
     const userData = {
       username,
       phoneNumber,
-      role: role === 'Admin' ? 'mill_owner' : 'customer', // Map role to mill_owner or customer
-      isVerified: false, // Initially not verified
+      role: role === 'Admin' ? 'mill_owner' : 'customer', 
+      isVerified: false, 
     };
-    // Store user data in AuthContext
+    
     login(userData);
-    // Simulate sending OTP (In a real app, you'd call an API to send OTP)
+   
     console.log('Sending OTP to:', phoneNumber);
     navigate('/verify-otp', { state: { phoneNumber } });
   };
@@ -91,3 +91,5 @@ const LoginPage = () => {
 };
 
 export default LoginPage;
+
+

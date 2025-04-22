@@ -4,13 +4,14 @@ import { Chart as ChartJS, LineElement, PointElement, CategoryScale, LinearScale
 import { FaChartLine, FaBoxOpen, FaChartBar, FaUsers, FaShoppingCart, FaTachometerAlt, FaCog, FaQuestionCircle, FaSyncAlt, FaBell, FaUser, FaWarehouse, FaDollarSign, FaClipboardList, FaTruck } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import '../styles/DashboardPage.css';
+import logo from '../assets/logo.png';
 
 ChartJS.register(LineElement, PointElement, CategoryScale, LinearScale, ArcElement, Tooltip, Legend);
 
 const DashboardPage = () => {
   const navigate = useNavigate();
 
-  // Notification State
+ 
   const [showNotifications, setShowNotifications] = useState(false);
   const [notifications, setNotifications] = useState([
     { id: 1, message: 'New order received from Maheesa Thambawita', date: '2025-01-20', read: false },
@@ -44,10 +45,10 @@ const DashboardPage = () => {
   };
 
   const recentOrders = [
-    { id: '#12345', customer: 'Maheesha Thambawita', status: 'Delivered', amount: '$320.00' },
-    { id: '#12344', customer: 'Maheesha Thambawita', status: 'Processing', amount: '$150.00' },
-    { id: '#12343', customer: 'Yasas Dinusha', status: 'Shipped', amount: '$450.00' },
-    { id: '#12342', customer: 'Ranjith Weerasinghe', status: 'Delivered', amount: '$300.00' },
+    { id: '#12345', customer: 'Maheesha Thambawita', status: 'Delivered', amount: 'LKR 3200.00' },
+    { id: '#12344', customer: 'Maheesha Thambawita', status: 'Processing', amount: 'LKR 1500.00' },
+    { id: '#12343', customer: 'Yasas Dinusha', status: 'Shipped', amount: 'LKR 4500.00' },
+    { id: '#12342', customer: 'Ranjith Weerasinghe', status: 'Delivered', amount: 'LKR 3000.00' },
   ];
 
   const handleViewAll = () => {
@@ -60,7 +61,7 @@ const DashboardPage = () => {
 
   const handleSyncData = () => {
     console.log('Syncing data...');
-    // Add dynamic notification for sync
+   
     setNotifications([
       ...notifications,
       {
@@ -75,7 +76,7 @@ const DashboardPage = () => {
 
   const handleNotificationClick = () => {
     if (!showNotifications) {
-      // Mark all notifications as read when opening the dropdown
+     
       const updatedNotifications = notifications.map(n => ({ ...n, read: true }));
       setNotifications(updatedNotifications);
     }
@@ -88,7 +89,9 @@ const DashboardPage = () => {
     <div className="dashboard-page">
       {/* Sidebar */}
       <div className="sidebar">
-        <div className="logo">LOGO</div>
+        <div className="logo">
+        <img src={logo} alt="RiceMillPro Logo" />
+        </div>
         <nav className="sidebar-nav">
           <button className="nav-item active">
             <FaTachometerAlt className="icon" /> Dashboard
@@ -108,10 +111,10 @@ const DashboardPage = () => {
           <button className="nav-item" onClick={() => navigate('/analytics')}>
             <FaChartBar className="icon" /> Analytics
           </button>
-          <button className="nav-item">
+          <button className="nav-item" onClick={() => navigate('/settings')}>
             <FaCog className="icon" /> Settings
           </button>
-          <button className="nav-item">
+          <button className="nav-item" onClick={() => navigate('/help')}>
             <FaQuestionCircle className="icon" /> Help
           </button>
         </nav>
@@ -186,7 +189,7 @@ const DashboardPage = () => {
             </div>
             <div className="card-content">
               <h3>Daily Sales</h3>
-              <p>$12,430</p>
+              <p>LKR 60,500</p>
               <span className="trend up">↑ 8.2%</span>
             </div>
           </div>

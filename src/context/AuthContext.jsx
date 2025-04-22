@@ -1,27 +1,10 @@
-/*import React, { createContext, useContext, useState } from 'react';
-
-const AuthContext = createContext();
-
-export const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState({
-    role: 'rice_mill_owner', 
-  });
-
-  return (
-    <AuthContext.Provider value={{ user, setUser }}>
-      {children}
-    </AuthContext.Provider>
-  );
-};
-
-export const useAuth = () => useContext(AuthContext);*/
-
 import React, { createContext, useContext, useState } from 'react';
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState({ role: 'mill_owner' });
+  const [reports, setReports] = useState([]);
 
   const login = (userData) => {
     setUser(userData);
@@ -32,13 +15,20 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ user, login, logout }}>
+    <AuthContext.Provider value={{ user, login, logout, setUser, reports, setReports }}>
       {children}
     </AuthContext.Provider>
   );
 };
 
 export const useAuth = () => useContext(AuthContext);
+
+
+
+
+
+
+
 
 
 

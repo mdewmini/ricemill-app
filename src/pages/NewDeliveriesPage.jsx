@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FaBell, FaUser, FaDownload, FaEdit, FaEye, FaPlus } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import '../styles/NewDeliveriesPage.css';
+import logo from '../assets/logo.png';
 
 const NewDeliveriesPage = () => {
   const navigate = useNavigate();
@@ -141,7 +142,9 @@ const NewDeliveriesPage = () => {
       {/* Header */}
       <header className="new-deliveries-header">
         <div className="new-deliveries-header-top">
-          <div className="new-deliveries-logo">LOGO</div>
+          <div className="new-deliveries-logo">
+          <img src={logo} alt="RiceMillPro Logo" />
+          </div>
           <nav className="new-deliveries-header-nav">
             <button className="new-deliveries-nav-item" onClick={() => navigate('/dashboard')}>
               Dashboard

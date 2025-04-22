@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FaBoxOpen, FaChartLine, FaTrash, FaEdit, FaSyncAlt, FaBell, FaUser, FaWarehouse, FaChartBar, FaClock, FaPlus } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import '../styles/InventoryPage.css';
+import logo from '../assets/logo.png';
 
 const InventoryPage = () => {
   const [inventoryItems, setInventoryItems] = useState([
@@ -18,19 +19,19 @@ const InventoryPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 2;
 
-  // Search and Filter States
+  
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedType, setSelectedType] = useState('All Types');
   const [selectedTimePeriod, setSelectedTimePeriod] = useState('All Time');
 
-  // Notification State
+
   const [showNotifications, setShowNotifications] = useState(false);
   const [notifications, setNotifications] = useState([
     { id: 1, message: 'Low stock alert for White Rice', date: '2025-01-19', read: false },
     { id: 2, message: 'Pending update for Basmati Rice', date: '2025-01-20', read: false },
   ]);
 
-  // Modal State for Add Stock
+ 
   const [showAddStockModal, setShowAddStockModal] = useState(false);
   const [newStock, setNewStock] = useState({
     name: '',
@@ -40,9 +41,9 @@ const InventoryPage = () => {
     status: 'Healthy',
   });
 
-  // Add Stock Functionality with Modal
+ 
   const handleAddStock = () => {
-    setShowAddStockModal(true); // Open modal instead of adding directly
+    setShowAddStockModal(true); 
   };
 
   const handleSaveStock = () => {
@@ -70,7 +71,7 @@ const InventoryPage = () => {
     };
     setInventoryHistory([newHistory, ...inventoryHistory]);
 
-    // Add notification
+   
     setNotifications([
       ...notifications,
       {
@@ -81,12 +82,12 @@ const InventoryPage = () => {
       },
     ]);
 
-    // Reset and close modal
+    
     setNewStock({ name: '', type: 'Rice', quantity: '', unit: 'kg', status: 'Healthy' });
     setShowAddStockModal(false);
   };
 
-  // Add New Item via Actions Column (unchanged)
+ 
   const handleAddNewItem = () => {
     const newName = prompt('Enter new item name:');
     const newType = prompt('Enter item type (e.g., Rice, Paddy):');
@@ -126,7 +127,7 @@ const InventoryPage = () => {
     }
   };
 
-  // Export Functionality
+  
   const handleExport = () => {
     const csvContent = [
       ['Item Name', 'Type', 'Quantity', 'Unit', 'Status', 'Last Updated'],
@@ -151,7 +152,7 @@ const InventoryPage = () => {
     document.body.removeChild(link);
   };
 
-  // Edit Item Functionality
+  
   const handleEdit = (index) => {
     const newName = prompt('Enter new item name:', inventoryItems[index].name);
     if (newName) {
@@ -161,7 +162,7 @@ const InventoryPage = () => {
     }
   };
 
-  // Delete Item Functionality
+  
   const handleDelete = (index) => {
     if (window.confirm('Are you sure you want to delete this item?')) {
       const deletedItem = inventoryItems[index];
@@ -189,7 +190,7 @@ const InventoryPage = () => {
     }
   };
 
-  // Pagination Functionality
+  
   const handlePrevious = () => {
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1);
@@ -203,7 +204,7 @@ const InventoryPage = () => {
     }
   };
 
-  // Filter Inventory Items
+ 
   const filteredItems = inventoryItems.filter(item => {
     const matchesSearch = item.name.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesType = selectedType === 'All Types' || item.type === selectedType;
@@ -219,18 +220,18 @@ const InventoryPage = () => {
         thirtyDaysAgo.setDate(today.getDate() - 30);
         return itemDate >= thirtyDaysAgo && itemDate <= today;
       }
-      return true; // All Time
+      return true; 
     };
     return matchesSearch && matchesType && matchesTimePeriod();
   });
 
-  // Paginated History Data
+  
   const paginatedHistory = inventoryHistory.slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
   );
 
-  // Sync Data Functionality
+ 
   const handleSyncData = () => {
     console.log('Syncing data...');
     setNotifications([
@@ -245,7 +246,7 @@ const InventoryPage = () => {
     alert('Data synced successfully!');
   };
 
-  // Notification Click Handler
+  
   const handleNotificationClick = () => {
     if (!showNotifications) {
       const updatedNotifications = notifications.map(n => ({ ...n, read: true }));
@@ -266,7 +267,9 @@ const InventoryPage = () => {
         <header className="inventory-header">
           <div className="header-top">
             <div className="header-left">
-              <div className="logo">LOGO</div>
+              <div className="logo_inventory">
+              <img src={logo} alt="RiceMillPro Logo" />
+              </div>
               <button className="dashboard-btn" onClick={() => navigate('/dashboard')}>
                 Back to Dashboard
               </button>
