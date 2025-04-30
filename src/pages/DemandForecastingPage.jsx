@@ -7,6 +7,7 @@ import { useAuth } from '../context/AuthContext';
 import '../styles/DemandForecastingPage.css';
 import logo from '../assets/logo.png';
 
+
 ChartJS.register(LineElement, PointElement, CategoryScale, LinearScale, Tooltip, Legend);
 
 const DemandForecastingPage = () => {
@@ -152,7 +153,7 @@ const DemandForecastingPage = () => {
 
   return (
     <div className="demand-forecasting-page">
-      {/* Header */}
+      
       <header className="forecasting-header">
         <div className="header-top">
           <div className="header-left">
@@ -209,7 +210,7 @@ const DemandForecastingPage = () => {
         <h1>Demand Forecasting</h1>
       </header>
 
-      {/* Forecasting Cards */}
+     
       <div className="forecasting-cards">
         <div className="card">
           <div className="card-icon"><FaChartLine /></div>
@@ -241,7 +242,6 @@ const DemandForecastingPage = () => {
         </div>
       </div>
 
-      {/* Forecast Chart and Scenario Planning */}
       <div className="forecast-content">
         <div className="forecast-chart">
           <div className="chart-header">
@@ -328,7 +328,7 @@ const DemandForecastingPage = () => {
         </div>
       </div>
 
-      {/* Insights, Actions, and Risks */}
+    
       <div className="forecast-insights">
         <div className="insights-section">
           <h3>Insights & Recommendations</h3>
@@ -362,7 +362,7 @@ const DemandForecastingPage = () => {
         </div>
       </div>
 
-      {/* Export Button */}
+     
       <div className="export-section">
         <button className="export-btn" onClick={handleExport}>
           <FaDownload /> Export
@@ -373,3 +373,10 @@ const DemandForecastingPage = () => {
 };
 
 export default DemandForecastingPage;
+
+
+
+
+
+
+

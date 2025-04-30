@@ -81,7 +81,7 @@ const NewOrdersPage = () => {
       customer: newOrder.customer,
       status: newOrder.status,
       date: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
-      total: `$${parseFloat(newOrder.total).toFixed(2)}`,
+      total: `LKR${parseFloat(newOrder.total).toFixed(2)}`,
     };
     setOrders([...orders, order]);
     setNotifications([

@@ -5,6 +5,7 @@ import { FaBell, FaUserPlus, FaEdit, FaTrash, FaCheckCircle, FaCamera, FaTimes, 
 import '../styles/SettingsPage.css';
 import logo from '../assets/logo.png';
 
+
 const SettingsPage = () => {
   const { user } = useAuth();
   const navigate = useNavigate();
@@ -712,3 +713,10 @@ const SettingsPage = () => {
 };
 
 export default SettingsPage;
+
+
+
+
+
+
+
