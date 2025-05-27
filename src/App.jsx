@@ -31,6 +31,7 @@ import CustomerProfilePage from './pages/CustomerProfilePage';
 
 
 
+
 function App() {
   return (
     <AuthProvider>
@@ -62,6 +63,7 @@ function App() {
           <Route path="/checkout-confirmation" element={<CheckoutConfirmationPage />} />
           <Route path="/customer-orders" element={<CustomerOrdersPage/>} />
           <Route path="/profile" element={<CustomerProfilePage />} />
+
           
           
         </Routes>
